@@ -37,6 +37,7 @@ public class Scissor : MonoBehaviour
         {
             isAbleToCut = true;
             selectionRoot = collision;
+            
         }
     }
 

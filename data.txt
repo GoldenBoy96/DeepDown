@@ -1,1 +1,1 @@
-{"healthAmount":-51.6995964050293,"maxHealth":100.0}
+{"healthAmount":184.40286254882813,"maxHealth":100.0,"waterAmount":-0.10000000149011612,"maxWater":100.0}

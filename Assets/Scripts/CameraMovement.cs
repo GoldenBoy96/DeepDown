@@ -8,7 +8,7 @@ public class CameraMovement : MonoBehaviour
     private Vector3 Difference;
     private Vector3 ResetCamera;
 
-    private int cooldown = 100;
+    private int cooldown = 10;
 
     private bool drag = false;
 
@@ -40,7 +40,7 @@ public class CameraMovement : MonoBehaviour
     private void OnMouseUp()
     {
         drag = false;
-        cooldown = 100;
+        cooldown = 10;
     }
 
     private void Update()
@@ -52,7 +52,7 @@ public class CameraMovement : MonoBehaviour
             Camera.main.transform.position = Origin - Difference;
         }
 
-        if (Input.GetMouseButton(1))
+        if (Input.GetMouseButton(2))
             Camera.main.transform.position = ResetCamera;
 
     }

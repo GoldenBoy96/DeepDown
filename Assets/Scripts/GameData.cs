@@ -4,6 +4,8 @@ namespace Assets.Scripts
     {
         public float healthAmount;
         public float maxHealth;
+        public float waterAmount;
+        public float maxWater;
         
     }
 }

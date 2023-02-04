@@ -54,4 +54,14 @@ public class HealthManager : MonoBehaviour
             healthAmount += 0.1f;
         }
     }
+
+    private void EndGame()
+    {
+        if (healthAmount < 0)
+        {
+            //Ch? này t?o ra màn hình k?t thúc và nút restart
+
+            
+        }
+    }
 }

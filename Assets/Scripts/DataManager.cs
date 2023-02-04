@@ -7,22 +7,21 @@ using UnityEngine.Playables;
 
 public class DataManager
 {
-    private static GameData _gameData;
+    
 
     public static GameData GetGameData()
-    {
-        ReadData();
-        return _gameData;
+    {        
+        return ReadData();
     }
 
-    public static void SetGameData(GameData gameData)
-    {
-        _gameData = gameData;
-        SaveData();
+    public static void SetGameData(GameData _gameData)
+    {        
+        SaveData(_gameData);
     }
 
-    private static void ReadData()
+    private static GameData ReadData()
     {
+        GameData _gameData;
         string jsonRead;
         try
         {
@@ -35,9 +34,10 @@ public class DataManager
             string json = JsonUtility.ToJson(_gameData);
             System.IO.File.WriteAllText("data.txt", json);
         }
+        return _gameData;
     }
 
-    private static void SaveData()
+    private static void SaveData(GameData _gameData)
     {
         string json = JsonUtility.ToJson(_gameData);
         //Debug.Log(json);

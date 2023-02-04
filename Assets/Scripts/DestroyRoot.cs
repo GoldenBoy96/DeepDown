@@ -13,7 +13,7 @@ public class DestroyRoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (transform.position.y >= 4000)
+        if (transform.position.y >= 3000)
         {
             Destroy(gameObject);
         }

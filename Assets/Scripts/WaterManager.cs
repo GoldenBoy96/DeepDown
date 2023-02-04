@@ -11,8 +11,9 @@ public class WaterManager : MonoBehaviour
     public float minWater = 0;
     public Gradient gradient;
     public Image waterFill;
+    private int numberOfRoot = 1;
 
-   GameData gameData;
+    GameData gameData;
 
     private float waterAmount;
     // Start is called before the first frame update
@@ -23,8 +24,11 @@ public class WaterManager : MonoBehaviour
         waterAmount = maxWater * 2 / 3;
         waterSlider.value = waterAmount / maxWater;
         waterFill.color = gradient.Evaluate(1f);
+        gameData = DataManager.GetGameData();
+        gameData.waterAmount = waterAmount;
+        gameData.maxWater = maxWater;
+        DataManager.SetGameData(gameData);
 
-        
 
     }
 
@@ -35,36 +39,54 @@ public class WaterManager : MonoBehaviour
         WaterComsume();
         waterSlider.value = waterAmount / maxWater;
         waterFill.color = gradient.Evaluate(waterSlider.normalizedValue);
+        gameData = DataManager.GetGameData();
+        waterAmount = gameData.waterAmount;
+        RootCount();
+    }
+
+    private void RootCount()
+    {
+        numberOfRoot = GameObject.FindGameObjectsWithTag("Wood").Length;
+    }
+
+    private void WaterTank()
+    {
+        int numberOfWaterTank = GameObject.FindGameObjectsWithTag("WaterTank").Length;
+        gameData = DataManager.GetGameData();
+        gameData.maxWater = 100 + numberOfWaterTank * 10;
+        DataManager.SetGameData(gameData);
     }
 
     private void MinMax()
     {
         if (waterAmount < minWater) waterAmount = minWater;
         if (waterAmount > maxWater) waterAmount = maxWater;
-        
+
+
+
     }
 
-    private int consumeCooldown = 30;
+    private int consumeCooldown = 15;
     private void WaterComsume()
     {
+        gameData = DataManager.GetGameData();
         if (consumeCooldown > 0) consumeCooldown--;
         else
         {
-            waterAmount -= maxWater / 1000;
-            consumeCooldown = 12;
-            if (waterAmount >= 0 && waterAmount <= maxWater)
+            //Debug.Log(waterAmount);
+            waterAmount -= maxWater / 1000 + numberOfRoot / 200;
+            consumeCooldown = 15;
+            if (waterAmount > 0 && waterAmount < maxWater - 1)
             {
-                gameData = DataManager.GetGameData();
-                gameData.healthAmount += gameData.maxHealth / 1000;
-                DataManager.SetGameData(gameData);
+                gameData.healthAmount += gameData.maxHealth / 1000  ;             
             }
-            else 
+            else
             {
-                gameData = DataManager.GetGameData();
-                gameData.healthAmount -= gameData.maxHealth / 1000;
-                DataManager.SetGameData(gameData);
+                gameData.healthAmount -= gameData.maxHealth / 500  ;
             }
-            
+            gameData.waterAmount = waterAmount;
+
         }
+        DataManager.SetGameData(gameData);
     }
 }

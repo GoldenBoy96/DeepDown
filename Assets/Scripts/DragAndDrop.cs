@@ -37,6 +37,7 @@ public class DragAndDrop : MonoBehaviour
             Rotate();
             Cancel();
         }
+        //Debug.Log(isDragging);
     }
 
     void Cancel()
@@ -60,7 +61,7 @@ public class DragAndDrop : MonoBehaviour
         {
             if (transform.rotation.z <= 0.4f)
             {
-                Vector3 rotationToAdd = new Vector3(0, 0, 0.2f);
+                Vector3 rotationToAdd = new Vector3(0, 0, 0.4f);
                 transform.Rotate(rotationToAdd);
 
             } 
@@ -71,7 +72,7 @@ public class DragAndDrop : MonoBehaviour
         {
             if (transform.rotation.z >= -0.4f)
             {
-                Vector3 rotationToAdd = new Vector3(0, 0, -0.2f);
+                Vector3 rotationToAdd = new Vector3(0, 0, -0.4f);
                 transform.Rotate(rotationToAdd, Space.Self);
                 
             }

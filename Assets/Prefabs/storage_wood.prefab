@@ -74,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 35787d0ac89d30e4f987869db4a364dc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 5915338475920403161}
   m_Layer: 0
   m_Name: wood_watertank
-  m_TagString: Untagged
+  m_TagString: WaterTank
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -437,6 +437,7 @@ GameObject:
   - component: {fileID: 3368219960465681006}
   - component: {fileID: 5390173750024282265}
   - component: {fileID: 4347511417549832926}
+  - component: {fileID: 6143953707554640}
   m_Layer: 0
   m_Name: storage_wood
   m_TagString: ConnectionA
@@ -543,7 +544,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 228ff2caee240aa499e99fcc717192c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  childNumber: 0
 --- !u!114 &4347511417549832926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -554,5 +554,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b2072923ad43c9f4097179a755e7bf70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6143953707554640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8921438666899011018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f01fd7a156118f64ba45da0bd9c9cc49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

@@ -146,6 +146,7 @@ GameObject:
   - component: {fileID: 7178143339606941299}
   - component: {fileID: 2276959356116672921}
   - component: {fileID: 5711835847901748753}
+  - component: {fileID: 8556434927240620238}
   m_Layer: 0
   m_Name: collector_wood
   m_TagString: ConnectionA
@@ -250,7 +251,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 228ff2caee240aa499e99fcc717192c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  childNumber: 0
 --- !u!114 &5711835847901748753
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -261,6 +261,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b2072923ad43c9f4097179a755e7bf70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8556434927240620238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7157340905428047064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f01fd7a156118f64ba45da0bd9c9cc49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &8159370823756934224
@@ -274,6 +286,7 @@ GameObject:
   - component: {fileID: 4573791202219160204}
   - component: {fileID: 1323136301986169545}
   - component: {fileID: 1237483232141749248}
+  - component: {fileID: 5085657454661418267}
   m_Layer: 0
   m_Name: wood_water_collector
   m_TagString: Collector
@@ -379,3 +392,15 @@ PolygonCollider2D:
       - {x: 0.3934773, y: 0.14798415}
       - {x: 0.03709299, y: 0.20371401}
       - {x: -0.3198948, y: 0.11740327}
+--- !u!114 &5085657454661418267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8159370823756934224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4773a5152ec45d42803b2abcb0b4906, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -11,6 +11,8 @@ TagManager:
   - ShopExpand
   - ShopCollector
   - ShopStorage
+  - Water
+  - WaterTank
   layers:
   - Default
   - TransparentFX
